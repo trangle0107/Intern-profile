@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  
+  .text-dark {
+    color: rgba(34, 45, 107);
+    font-weight: 800;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7em;
+    letter-spacing: 0.8px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+  }
+  i {
+    color: rgba(34, 45, 107, 0.9);
+  }
+  
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 5px -2px 5px 0px;
+    padding: 1rem 2rem 0 3rem;
+  }
+  
+  nav {
+    flex-basis: 200px;
+  }
+  
+  nav > ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Profile */
+  
+  #profile {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  .profile-general-info {
+    font-size: 0.88rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0.5rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.37);
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0.5rem;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-info > li:first-child {
+    text-align: center;
+  }
+  .profile-info > li {
+    margin: 0.3em;
+  }
+  
+  .profile-social {
+    font-size: 30px;
+  }
+  .profile-social a {
+    margin: 0.5em;
+  }
+  
+  /* Profile content */
+  .profile-content {
+    margin: 1rem 0 0rem 1rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.37);
+    background-color: #ffffff;
+  }
+  .profile-content-menu {
+    display: flex;
+    margin: 1rem;
+  }
+  .profile-content-menu li a {
+    position: relative;
+    text-decoration: none;
+    color: rgba(34, 45, 107);
+    margin: 1em;
+    cursor: pointer;
+  }
+  .profile-content-menu li a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 0.5px;
+    right: 0;
+    background: rgba(34, 45, 107);
+    transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease;
+  }
+  .profile-content-menu li a:hover:after {
+    width: 105%;
+    left: 0;
+    background: #262626bd;
+  }
+  
+  /*Progress bar */
+  .progress-container {
+    height: 15px;
+    width: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 2px;
+    position: relative;
+    box-shadow: -1px 1px 4px 2px rgba(0, 0, 0, 0.329);
+  }
+  .progress-fill {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(
+      139deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(34, 45, 107, 0.9) 41%,
+      rgba(76, 34, 107, 0.8) 93%
+    );
+  }
+  
+  /*Grid for destop  */
+  
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33% !important ;
+  }
+  .col-5 {
+    width: 41.66% !important ;
+  }
+  .col-6 {
+    width: 50% !important ;
+  }
+  .col-7 {
+    width: 58.33% !important ;
+  }
+  .col-8 {
+    width: 66.66% !important ;
+  }
+  .col-9 {
+    width: 75% !important ;
+  }
+  .col-10 {
+    width: 83.33% !important ;
+  }
+  .col-11 {
+    width: 91.66% !important ;
+  }
+  .col-12 {
+    width: 100% !important ;
+  }
+  /*Responsive layout*/
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    header {
+      justify-content: center;
+    }
+    .brand-logo-container {
+      text-align: center;
+    }
+  
+    [class*="col-"] {
+      width: 100% !important;
+    }
+  }
+  
+  /* Active link */
+  #active:after {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 2px;
+    display: block;
+    margin-top: 0.5px;
+    left: 0;
+    background: rgba(34, 45, 107);
+    transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease;
+  }
+  
+  /*Ecperience Card  */
+  
+  .experience-container,
+  .education-container {
+    display: none;
+  }
+  
+  .experience-card,
+  .education-card {
+    font-weight: 400;
+    font-size: 0.88rem;
+    color: rgb(245, 245, 245);
+    background-color: rgb(28, 28, 28);
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+  }
+  
+  .project-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    padding: 0.2em;
+    border: 0.5px solid rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    font-size: 12px;
+    /* padding: 0.5rem; */
+  }
+  .project-card img {
+    align-self: center;
+  }
+  
